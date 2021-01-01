@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: donge
+  name: donge
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: donge
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: donge
+    spec:
+      containers:
+      - image: ishuah/donge:latest
+        name: donge
+        resources: {}
+        imagePullPolicy: Never
+status: {}
